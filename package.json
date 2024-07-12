@@ -1,19 +1,17 @@
 {
-  "name": "electron-docker",
+  "name": "docker-ui",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "electron:start": "electron .",
-    "nodemon":"nodemon ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^31.2.0"
-  },
   "dependencies": {
-    "child_process": "^1.0.2"
+    "axios": "^1.7.2",
+    "child_process": "^1.0.2",
+    "electron": "^31.2.0"
   }
 }
