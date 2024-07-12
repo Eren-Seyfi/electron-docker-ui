@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../public/icons/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../../public/css/style.css" />
+    <title>Hatalar</title>
+  </head>
+  <body class="bg-body-secondary">
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <!-- ============= Menü ============= -->
+
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <!-- ============= Logo ============= -->
+            <span
+              class="d-flex align-items-center justify-content-center w-100 py-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            >
+              <img src="../../public/img/docker.svg" width="80px" />
+            </span>
+            <!-- ================================== -->
+
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <!-- ============= Anasayfa ============= -->
+              <li class="nav-item">
+                <a
+                  href="../index.html"
+                  class="nav-link align-middle px-0 text-white"
+                >
+                  <i class="fs-4 bi bi-house-door-fill"></i>
+                  <span class="ms-1 d-none d-sm-inline">Anasayfa</span>
+                </a>
+              </li>
+              <!-- ============= İndirilenler ============= -->
+              <li class="nav-item">
+                <a
+                  href="../downloads.html"
+                  class="nav-link align-middle px-0 text-white"
+                >
+                  <i class="fs-4 bi bi-cloud-arrow-down-fill"></i>
+                  <span class="ms-1 d-none d-sm-inline">İndirilenler</span>
+                </a>
+              </li>
+
+              <!-- ============= Projeler ============= -->
+              <li class="nav-item">
+                <a
+                  href="../projects.html"
+                  class="nav-link align-middle px-0 text-white"
+                >
+                  <i class="fs-4 bi bi-box2-heart-fill"></i>
+                  <span class="ms-1 d-none d-sm-inline">Projeler</span>
+                </a>
+              </li>
+              <!-- ============= Loglar ============= -->
+              <li>
+                <a
+                  href="#logs"
+                  data-bs-toggle="collapse"
+                  class="nav-link px-0 align-middle text-danger"
+                >
+                  <i class="fs-4 bi bi-substack"></i>
+                  <span class="ms-1 d-none d-sm-inline">Loglar</span></a
+                >
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="logs"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a href="log.html" class="nav-link px-0 text-success">
+                      <i class="bi bi-bookmark-fill"></i>
+                      <span class="d-none d-sm-inline">Kayıtlar</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="error.html" class="nav-link px-0 text-danger"
+                      ><i class="bi bi-x-circle-fill"></i>
+                      <span class="d-none d-sm-inline">Hatalar</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="info.html" class="nav-link px-0 text-warning"
+                      ><i class="bi bi-info-circle-fill"></i>
+                      <span class="d-none d-sm-inline">Bilgilendirmeler</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- ==================================================================== -->
+            </ul>
+          </div>
+        </div>
+        <!-- ================================================== -->
+
+        <!-- ============= Content ============= -->
+        <div class="col py-3">Error page</div>
+        <!-- ================================================== -->
+      </div>
+    </div>
+
+    <script src="../../public/js/bootstrap.bundle.min.js"></script>
+    <script src="../../public/js/index.js"></script>
+  </body>
+</html>

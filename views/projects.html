@@ -57,20 +57,53 @@
               <li class="nav-item">
                 <a
                   href="projects.html"
-                  class="nav-link align-middle px-0 text-success"
+                  class="nav-link align-middle px-0 text-info"
                 >
                   <i class="fs-4 bi bi-box2-heart-fill"></i>
                   <span class="ms-1 d-none d-sm-inline">Projeler</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- ============= Loglar ============= -->
+              <li>
                 <a
-                  href="error.html"
-                  class="nav-link align-middle px-0 text-white"
+                  href="#logs"
+                  data-bs-toggle="collapse"
+                  class="nav-link px-0 align-middle text-white"
                 >
-                  <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
-                  <span class="ms-1 d-none d-sm-inline">Hatalar</span>
-                </a>
+                  <i class="fs-4 bi bi-substack"></i>
+                  <span class="ms-1 d-none d-sm-inline">Loglar</span></a
+                >
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="logs"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      href="./logs/log.html"
+                      class="nav-link px-0 text-success"
+                    >
+                      <i class="bi bi-bookmark-fill"></i>
+                      <span class="d-none d-sm-inline">Kayıtlar</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./logs/error.html"
+                      class="nav-link px-0 text-danger"
+                      ><i class="bi bi-x-circle-fill"></i>
+                      <span class="d-none d-sm-inline">Hatalar</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./logs/info.html"
+                      class="nav-link px-0 text-warning"
+                      ><i class="bi bi-info-circle-fill"></i>
+                      <span class="d-none d-sm-inline">Bilgilendirmeler</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <!-- ==================================================================== -->
             </ul>

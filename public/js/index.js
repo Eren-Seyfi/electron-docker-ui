@@ -20,36 +20,51 @@ function displayResults(results) {
     card.className = "card";
     card.style.width = "16rem";
     card.innerHTML = `
-      <img
-        src="${result.logo_url.large || "https://placehold.co/100"}"
-        class="card-img-top"
-        style="
-          object-fit: scale-down;
-          object-position: center;
-        "
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">${result.name}</h5>
-        <p class="card-text">
-          ${result.short_description}
-        </p>
+    <img
+      src="${result.logo_url.large || "https://placehold.co/100"}"
+      class="card-img-top"
+      style="
+        object-fit: scale-down;
+        object-position: center;
+      "
+      alt="..."
+    />
+    <div class="card-body d-flex flex-column justify-content-between">
+      <h5 class="card-title">${result.name}</h5>
+      <p class="card-text">
+        ${result.description}
+      </p>
+      <div class="d-flex justify-content-between w-100">
         <button onclick="download('${
           result.slug
-        }')" type="button" class="btn btn-outline-success">
+        }')" type="button" class="btn btn-outline-primary">
           <i class="bi bi-cloud-arrow-down-fill"></i>
         </button>
+        ${
+          result.is_official
+            ? '<a type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top" class="btn btn-success"><i class="bi bi-check-circle-fill"></i></a>'
+            : ""
+        }
+        ${
+          result.source == "verified_publisher"
+            ? '<button type="button" class="btn btn-success"><i class="bi bi-patch-check-fill"></i></i></button>'
+            : ""
+        }
+
+        
       </div>
-    `;
+    </div>
+  `;
     cardContent.appendChild(card);
   });
 }
 
 async function download(slug) {
   const result = await window.electron.invoke("download", slug);
-  if ((result.message = "success")) {
-    alert("Docker görüntüsü başarıyla indirildi.");
-  } else {
+  console.log(result.message);
+  if ((result.message = "unsuccess")) {
     alert("Docker görüntüsü indirilirken hata oluştu.");
+  } else {
+    alert("Docker görüntüsü başarıyla indirildi.");
   }
 }

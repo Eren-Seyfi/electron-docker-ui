@@ -44,8 +44,13 @@ app.whenReady().then(() => {
 
   ipcMain.handle("download", async (event, data) => {
     try {
-      const result = await command("docker pull " + data);
+      const dockerPull = [`docker pull ${data}`];
+
+      const result = await command(dockerPull);
       console.log(result);
+      if ((result.message = "unsuccess")) {
+        return { message: "unsuccess" };
+      }
       return { message: "success" };
     } catch (error) {
       console.error("Error:", error);
